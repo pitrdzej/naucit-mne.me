@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pravopis: Jí vs. ji</title>
+  <link rel="stylesheet" href="style2.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <style>
+    body {
+      background: linear-gradient(135deg, #e02951, #000000);
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div id="content-wrapper">
+    <header>
+      <div class="logo">
+        <a href="./"><i class="fa-solid fa-school"></i> Tahák do češtiny</a>
+      </div>
+      <nav>
+        <a href="mneMe.html">Mně/Mě</a>
+        <span>·</span>
+        <a href="hold.html">Hold/Holt</a>
+        <span>·</span>
+        <a href="bysme.html">Bysme/Bychom</a>
+        <span>·</span>
+        <a href="tip.html">Tip/Typ</a>
+        <span>·</span>
+        <a href="jsiSi.html">Jsi/Si</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h1>Mám oslovit jí nebo ji?</h1>
+        <article>
+          <p>
+            Další zapeklitá zájmena jsou samozřejmě ji/jí. Ale hned se toho nelekej, během minuty Ti to vše začne dávat smysl!
+          </p>
+          <ul>
+            <li>„Ji“ používáme <strong>pouze</strong> ve čtvrtém pádě jednotného čísla (koho, co) – ve všech případech si ho můžeme nahradit zájmenem <strong>tu</strong>.</li>
+            <li>„Jí“ používáme ve všech ostatních pádech – vždy jde bez problémů nahradit zájmenem <strong>té</strong>.</li>
+          </ul>
+          <p><strong>Příklady</strong>:</p>
+          <ul>
+            <li>Snažil se <span class="swap" data-alt="té">jí</span> říct, že <span class="swap" data-alt="té">jí</span> spadla peněženka.</li>
+            <li>Nakonec si <span class="swap" data-alt="tu">ji</span> nechal. Půjde <span class="swap" data-alt="tu">ji</span> zužitkovat v kasínu.</li>
+            <li>Uslyšel <span class="swap" data-alt="tu">ji</span> brečet a vrátil <span class="swap" data-alt="té">jí</span> peněženku.</li>
+          </ul>
+        </article>
+
+        <div class="boxik">
+          <h2>💡Fígl!</h2>
+          <p>Krátké "ji" je bez čárky, proto tedy nahrazujeme krátkým "tu". Dlouhé "jí" ale čárku má, proto nahrazujeme dlouhým "té".</p>
+        </div>
+
+        <div class="buttons">
+          <a href="#"><button class="wrong">Extrémně ztracen :(</button></a>
+          <a href="#"><button class="right">Teď už to dává smysl!</button></a>
+        </div>
+      </section>
+
+      <aside>
+        <img src="jiJi.png" alt="Relevantní obrázek" />
+      </aside>
+    </main>
+  </div>
+
+  <div id="overlay" class="overlay hidden"></div>
+
+  <div id="modal-wrong" class="modal hidden">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="content">
+      <h2>Nechápeš? To není problém!</h2>
+      <p>Opakování je totiž matka moudrosti. Pokud si nevíš rady, zkus se podívat na podrobnější vysvětlení, nebo si to prostě přečti znovu. 😉</p>
+      <button onclick="closeModal()">Procvičit znovu</button>
+    </div>
+  </div>
+
+  <div id="modal-right" class="modal hidden">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="content">
+      <h2>🎉 Skvělé!</h2>
+      <p>Jen tak dál – ale vždy je prostor pro zlepšení!</p>
+      <div class="links">
+        <a href="mneMe.html">Mně × Mě</a>
+        <a href="hold.html">Hold × Holt</a>
+        <a href="bysme.html">Bychom × Bysme</a>
+        <a href="tip.html">Tip × Typ</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

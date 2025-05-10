@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pravopis: Tip vs. typ</title>
+  <link rel="stylesheet" href="style2.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <style>
+    body {
+        background: linear-gradient(135deg, #4361ee, #4895ef);
+        color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div id="content-wrapper">
+    <header>
+      <div class="logo"><a href="./"><i class="fa-solid fa-school"></i> Tahák do češtiny</a></div>
+      <nav>
+        <a href="mneMe.html">Mně/Mě</a>
+        <span>·</span>
+        <a href="jiJi.html">Ji/Jí</a>
+        <span>·</span>
+        <a href="hold.html">Hold/Holt</a>
+        <span>·</span>
+        <a href="bysme.html">Bysme/Bychom</a>
+        <span>·</span>
+        <a href="jsiSi.html">Jsi/Si</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h1>Kdy mám použít typ? Dáš mi tip?</h1>
+        <article>
+          <p>
+            Na první pohled jsou tip a typ totožná slova. Ale pozor, i tady použití "íčka" kompletně mění celý význam!
+          </p>
+          <ul>
+            <li>TYP => používáme ve smyslu <strong>typ člověka, věci</strong>, pochází od slov jako <i>typický, typizace</i>.</li>
+            <li>TIP => používáme ve smyslu <strong>odhad</strong>, například u sázek, případně jako <strong>radu</strong>, například na nějaký dobrý podnik.</li>
+          </ul>
+          <p><strong>Příklady</strong>:</p>
+          <ul>
+            <li>Jarda si <span class="swap" data-alt="odhadl">tipnul</span>, že mu padnou tři sedmičky. Nevyšlo.</li>
+            <li>U Bohouše je mi dobře. Je to příjemný <strong>typ</strong> člověka.</li>
+            <li>Jestli se chceš dobře najíst, m<span class="swap" data-alt="á rada">ůj tip</span> je jídelna Štefánikova!</li>
+          </ul>
+        </article>
+
+        <div class="buttons">
+          <a href="#"><button class="right">Dík za češtinářský tip!</button></a>
+        </div>
+      </section>
+
+      <aside>
+        <img src="tip.png" alt="Relevantní obrázek" />
+      </aside>
+    </main>
+  </div>
+
+  <div id="overlay" class="overlay hidden"></div>
+
+  <div id="modal-wrong" class="modal animate__animated hidden">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="content">
+      <h2>Nechápeš? To není problém!</h2>
+      <p>Opakování je totiž matka moudrosti. Pokud si nevíš rady, zkus se podívat na podrobnější vysvětlení, nebo si to prostě přečti znovu. 😉</p>
+      <button onclick="closeModal()">Procvičit znovu</button>
+    </div>
+  </div>
+
+  <div id="modal-right" class="modal animate__animated hidden">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="content">
+      <h2>Úžasná práce!</h2>
+      <p>Jen tak dál – co třeba naučit se další češtinářský trik?</p>
+      <div class="links">
+        <a href="jiJi.html">jí × ji</a>
+        <a href="bysme.html">by jsme × bychom</a>
+        <a href="jsiSi.html">jsi × si</a>
+        <a href="hold.html">hold × holt</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

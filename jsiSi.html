@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pravopis: Jsi vs. si</title>
+  <link rel="stylesheet" href="style2.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <style>
+    body {
+        background: linear-gradient(135deg, #f26fb9, #0e2d6b);
+        color: #fff;
+    }
+    .wrong {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="content-wrapper">
+    <header>
+      <div class="logo"><a href="./"><i class="fa-solid fa-school"></i> Tahák do češtiny</a></div>
+      <nav>
+        <a href="mneMe.html">Mně/Mě</a>
+        <span>·</span>
+        <a href="jiJi.html">Ji/Jí</a>
+        <span>·</span>
+        <a href="hold.html">Hold/Holt</a>
+        <span>·</span>
+        <a href="bysme.html">Bysme/Bychom</a>
+        <span>·</span>
+        <a href="tip.html">Tip/Typ</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h1>Jsi nebo si?</h1>
+        <article>
+          <p>
+            Slova „jsi“ a „si“ jsou pro spoustu lidí hodně náročná. Jak už v nich chybu neudělat?
+          </p>
+          <ul>
+            <li>„Jsi“ používáme jako oslovení, jakmile mluvíme k nějaké osobě.</li>
+            <li>„Si“ používáme jako zvratné zájmeno ke slovesu, dá se jednoduše nahradit zájmeny <strong>sebe, sobě</strong>.</li>
+          </ul>
+          <p><strong>Příklady</strong>:</p>
+          <ul>
+            <li>Hrál <span class="swap" data-alt="sobě">si</span> na hřišti, dokud ho nepřepadl nějaký dědeček.</li>
+            <li>Už <strong>jsi</strong> tu měl být čtyři minuty, ty magore!</li>
+          </ul>
+        </article>
+        <div class="boxik">
+            <h2>💡Fígl</h2>
+            <p>To samé platí se slovy "jsem" nebo "sem", kdy "sem" je pouze ukazovací zájmeno, zatímco když "jsem", tak mluvím o sobě.</p>
+        </div>
+        <div class="buttons">
+          <a href="#"><button class="wrong">eh</button></a>
+          <a href="#"><button class="right">Jsi nejlepší učitel!</button></a>
+        </div>
+      </section>
+
+      <aside>
+        <img src="jsiSi.png" alt="Relevantní obrázek" />
+      </aside>
+    </main>
+  </div>
+
+  <div id="overlay" class="overlay hidden"></div>
+
+  <div id="modal-wrong" class="modal animate__animated hidden">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="content">
+      <h2>😢 To je škoda...</h2>
+      <p>Zkus si to ještě jednou přečíst nebo mrkni do pravidel českého pravopisu.</p>
+      <button onclick="closeModal()">Procvičit znovu</button>
+    </div>
+  </div>
+
+  <div id="modal-right" class="modal animate__animated hidden">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="content">
+      <h2>Úžasná práce!</h2>
+      <p>Jen tak dál – co třeba naučit se další češtinářský trik?</p>
+      <div class="links">
+        <a href="jiJi.html">jí × ji</a>
+        <a href="bysme.html">by jsme × bychom</a>
+        <a href="tip.html">tip × typ</a>
+        <a href="hold.html">hold × holt</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pravopis: Mně vs. mě</title>
+  <link rel="stylesheet" href="style2.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <style>
+    body {
+      background: linear-gradient(135deg,  #614385, #516395);
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div id="content-wrapper">
+    <header>
+      <div class="logo"><a href="./"><i class="fa-solid fa-school"></i> Tahák do češtiny</a></div>
+      <nav>       
+        <a href="jiJi.html">Ji/Jí</a>
+        <span>·</span>
+        <a href="hold.html">Hold/Holt</a>
+        <span>·</span>
+        <a href="bysme.html">Bysme/Bychom</a>
+        <span>·</span>
+        <a href="tip.html">Tip/Typ</a>
+        <span>·</span>
+        <a href="jsiSi.html">Jsi/Si</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h1>Mně nebo mě?</h1>
+        <article>
+          <p>
+            Zájmena „mně“ a „mě“ si lidé často pletou. Jak si to jednoduše
+            zapamatovat?
+          </p>
+          <ul>
+            <li>„Mě“ používáme jako náhradu za zájmeno – <strong>tebe</strong>.</li>
+            <li>„Mně“ používáme ve stejných situacích, jako zájmeno – <strong>tobě</strong>.</li>
+          </ul>
+          <p><strong>Příklady</strong>:</p>
+          <ul>
+            <li>Jarek chtěl po <span class="swap" data-alt="tobě">mně</span> půjčit knihu. Vtipné, přišlo mi, že neumí číst.</li>
+            <li>Nějaký hodný pán mi dnes dal lízátko a svezl <span class="swap" data-alt="tebe">mě</span> ve své dodávce. :)</li>
+            <li>Po chvíli v dodávce to v<span class="swap" data-alt=" tobě">e mně</span> vyvolalo rozpaky.</li>
+          </ul>
+        </article>
+
+        <div class="boxik">
+          <h2>💡Fígl!</h2>
+          <p>Pokud by Ti trik s tebe/tobě nějak nešel do hlavy, můžeš si to zájmeno nahradit nějakým jménem -> například Petrem, Pepou nebo Vaškem! Jakmile to jméno v určitém pádu bude mít dvě slabiky, určitě je to <span class="swap" data-alt="Va-ška">mě</span>. Pokud tam budou tři slabiky, tvar půjde <strong><span class="swap" data-alt="Va-ško-vi">mně</span>.</strong> </p>
+        </div>
+
+        <div class="buttons">
+          <a href="#"><button class="wrong">Pořád nechápu</button></a>
+          <a href="#"><button class="right">Heuréka! Chápu!</button></a>
+        </div>
+      </section>
+
+      <aside>
+        <img src="mneMe.png" alt="Relevantní obrázek" />
+      </aside>
+    </main>
+  </div>
+
+  <div id="overlay" class="overlay hidden"></div>
+
+  <div id="modal-wrong" class="modal animate__animated hidden">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="content">
+      <h2>Nechápeš? To není problém!</h2>
+      <p>Opakování je totiž matka moudrosti. Pokud si nevíš rady, zkus se podívat na podrobnější vysvětlení, nebo si to prostě přečti znovu. 😉</p>
+      <button onclick="closeModal()">Procvičit znovu</button>
+    </div>
+  </div>
+
+  <div id="modal-right" class="modal animate__animated hidden">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="content">
+      <h2>Úžasná práce!</h2>
+      <p>Jen tak dál – co třeba naučit se další češtinářský trik?</p>
+      <div class="links">
+        <a href="jiJi.html">jí × ji</a>
+        <a href="bysme.html">by jsme × bychom</a>
+        <a href="tip.html">tip × typ</a>
+        <a href="hold.html">hold × holt</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

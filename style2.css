@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css2?family=Damion&family=Montserrat:ital,wght@0,500;0,600;1,500;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:wght@300&family=Ruge+Boogie&family=Sacramento&family=Yellowtail&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body {
+	line-height: 1;
+  font-family: 'Montserrat', Arial;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em 3em;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+nav span {
+  display: none;
+}
+.logo {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+.logo a {
+  text-decoration: none;
+  color: white;
+}
+.logo a i {
+  padding: 3px;
+}
+
+nav a {
+  margin-left: 1.5em;
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffd6ff;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 3em;
+  gap: 2em;
+}
+
+section {
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 1.5em;
+  box-shadow: 0 0 2em rgba(0,0,0,0.3);
+  flex: 1 1 400px;
+}
+
+section h1 {
+  font-size: 2em;
+  margin-bottom: 1em;
+  text-decoration: underline;
+}
+section div {
+  justify-content: center;
+}
+section p, section li {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 0.8em;
+}
+strong {
+  font-weight: bold;
+}
+i {
+  font-style: italic;
+}
+ul {
+  padding-left: 1.5em;
+}
+.swap {
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+.swap:hover {
+  color: #ffd6ff;
+  transform: scale(1.1);
+}
+
+.boxik {
+  width: 100%;
+  padding: 1em;
+  background: #ffffff3d;
+  border-radius: 1em;
+  box-sizing: border-box;
+}
+.boxik h2 {
+  font-weight: bold;
+  font-size: 20px;
+}
+.boxik p {
+  margin-left: 10px;
+  font-size: 15px;
+}
+.buttons {
+  margin-top: 2em;
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 0.8em 1.6em;
+  border: none;
+  border-radius: 2em;
+  font-size: 1em;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button.wrong {
+  background-color: rgba(223, 39, 39, 0.9);
+  color: #fff;
+}
+
+button.right {
+  background-color: rgba(3, 112, 27, 0.9);
+  color: #fff;
+}
+
+aside {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+}
+
+aside img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1em;
+  box-shadow: 0 0 1.5em rgba(0,0,0,0.3);
+}
+#content-wrapper {
+  transition: filter 0.5s ease;
+  position: relative;
+}
+
+.blurred {
+  filter: blur(6px);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(2px);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  color: whitesmoke;
+  padding: 2em;
+  border-radius: 1em;
+  box-shadow: 0 0 2em rgba(0, 0, 0, 1);
+  z-index: 1000;
+  max-width: 90%;
+  width: 400px;
+  height: fit-content;
+  animation: zoomInFade 0.4s ease-out forwards;
+}
+
+.modal .close {
+  position: absolute;
+  top: 0.5em;
+  right: 1em;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: whitesmoke;
+  text-shadow: 3px 0px 22px rgba(0,0,0,0.92);
+
+}
+
+.modal .content {
+  text-align: center;
+
+}
+.modal .content h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.modal .links {
+  margin-top: 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.modal .links a {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.6em 1em;
+  border-radius: 0.5em;
+  text-decoration: none;
+  color: whitesmoke;
+  transition: background 0.3s ease;
+}
+
+.modal .links a:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.modal.show {
+  animation: zoomInFade 0.4s ease-out forwards;
+}
+
+.modal.hide {
+  animation: zoomOutFade 0.4s ease-in forwards;
+}
+
+.hidden {
+  display: none;
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  z-index: -3;
+  background: rgba(255, 255, 255, 0.15);
+  animation: float 15s infinite ease-in-out;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+  }
+
+  nav {
+    gap: 0.5em;
+  }
+  nav span {
+    display: block;
+    font-weight: bold;
+  }
+
+  main {
+    flex-direction: column;
+    gap: 2em;
+    padding: 1em;
+  }
+
+  .buttons {
+    gap: 1em;
+    align-items: center;
+  }
+
+  aside img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 1.6em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+}
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1em;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1em;
+    gap: 0.5em;
+    line-height: 1.5;
+  }
+  
+  nav a,
+  nav span {
+    display: inline;
+    white-space: nowrap;
+    font-size: 1em;
+  }
+  main {
+    flex-direction: column;
+    padding: 1.5em 1em;
+    gap: 1.5em;
+  }
+
+  section, aside {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  section {
+    padding: 1.5em 1.2em;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .modal {
+    width: 90%;
+    padding: 1.5em 1em;
+  }
+
+  .modal .links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  p, li {
+    font-size: 1em;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.2em;
+  }
+
+  nav a {
+    margin-left: 0;
+  }
+
+  section h1 {
+    font-size: 1.3em;
+  }
+
+  button {
+    font-size: 0.95em;
+    padding: 0.6em 1.2em;
+  }
+
+  .modal {
+    font-size: 0.95em;
+  }
+}
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-20px) scale(1.1);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.7;
+  }
+}
+@keyframes zoomInFade {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomOutFade {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pravopis: Mně vs. mě</title>
+  <link rel="stylesheet" href="style2.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <style>
+    body {
+        background: linear-gradient(135deg, #fec163, #a08800);
+        color: #fff;
+    }
+    section {
+        background: rgba(0, 0, 0, 0.1)
+    }
+    .modal {
+        color: black;
+    }
+  </style>
+</head>
+<body>
+  <div id="content-wrapper">
+    <header>
+      <div class="logo">
+        <a href="./"><i class="fa-solid fa-school"></i> Tahák do češtiny</a>
+      </div>
+      <nav>
+        <a href="mneMe.html">Mně/Mě</a> 
+        <span>·</span>
+        <a href="jiJi.html">Ji/Jí</a>
+        <span>·</span>
+        <a href="hold.html">Hold/Holt</a>
+        <span>·</span>
+        <a href="tip.html">Tip/Typ</a>
+        <span>·</span>
+        <a href="jsiSi.html">Jsi/Si</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h1>Bysme? Bychom? By jsme?</h1>
+        <article>
+          <p>
+            Časování nejpoužívanějšího slovesa BÝT může být velmi zapeklité. Naštěstí existuje vždy jen jedna gramaticky správná varianta.
+          </p>
+          <ul>
+            <li><strong>BYCHOM</strong> je <strong>jediná</strong> správná varianta. Ostatní varianty jsou <strong>nespisovné</strong> a v odborné češtině se nepoužívají.</li>
+            <li><i>By jsi</i> vždy nahrazujeme správnou variantou <strong>BYS</strong>, stejně jako <i>by jsem</i> je spisovně <i>bych</i>.</li>
+          </ul>
+        </article>
+
+        <div class="boxik">
+          <h2>💡Fígl!</h2>
+          <p>Spisovné tvary tohoto slovesa jsou <i>téměř</i> vždy jednoslovné. Nikdy se v nich nepíše "j" (např. <i>byjste</i> je špatně, správně je <strong>byste</strong>) a není tam tvar "jsem" (žádné <i>byjsem/bysem</i>, ale <strong>bych</strong>)</p>
+        </div>
+
+        <div class="buttons">
+          <a href="#"><button class="wrong">Uhhhh cože</button></a>
+          <a href="#"><button class="right">Bingo! Můj výcvik je dokončen</button></a>
+        </div>
+      </section>
+
+      <aside>
+        <img src="bysme.png" alt="Relevantní obrázek" />
+      </aside>
+    </main>
+  </div>
+
+  <div id="overlay" class="overlay hidden"></div>
+
+  <div id="modal-wrong" class="modal hidden">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="content">
+      <h2>Nechápeš? To není problém!</h2>
+      <p>Opakování je totiž matka moudrosti. Pokud si nevíš rady, zkus se podívat na podrobnější vysvětlení, nebo si to prostě přečti znovu. 😉</p>
+      <button onclick="closeModal()">Procvičit znovu</button>
+    </div>
+  </div>
+
+  <div id="modal-right" class="modal hidden">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="content">
+      <h2>🎉 Skvělé!</h2>
+      <p>Jen tak dál – ale vždy je prostor pro zlepšení!</p>
+      <div class="links">
+        <a href="mneMe.html">Mně × Mě</a>
+        <a href="jiJi.html">Ji × Jí</a>
+        <a href="hold.html">Hold × Holt</a>
+        <a href="jsiSi.html">Jsi × Si</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
