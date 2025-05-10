@@ -13,44 +13,42 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-    box-sizing: border-box;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  box-sizing: border-box;
+  vertical-align: baseline;
 }
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+  display: block;
 }
 body {
-	line-height: 1;
-    font-family: 'Montserrat', Arial;
+  line-height: 1;
+  font-family: 'Montserrat', Arial;
 }
 ol, ul {
-	list-style: none;
+  list-style: none;
 }
 blockquote, q {
-	quotes: none;
+  quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+  content: '';
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
-  }
-  
-  body {
-    min-height: 100vh;
-    color: #fff;
-    background: #000;
-  }
-  
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body {
+  min-height: 100vh;
+  color: #fff;
+  background: #000;
+}
 
 section {
   height: 100vh;
@@ -66,6 +64,7 @@ section {
   z-index: 0;
   text-shadow: 3px 5px 2px rgb(71, 71, 71);
 }
+
 header {
   display: flex;
   justify-content: space-between;
@@ -79,17 +78,21 @@ header {
   top: 0;
   z-index: 10;
 }
+
 nav span {
   display: none;
 }
+
 .logo {
   font-size: 1.4em;
   font-weight: bold;
 }
+
 .logo a {
   text-decoration: none;
   color: white;
 }
+
 .logo a i {
   padding: 3px;
 }
@@ -105,63 +108,112 @@ nav a:hover {
   color: #ffd6ff;
 }
 
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.mobile-hidden {
+  display: none !important;
+}
+
+.mobile-nav {
+  transition: 0.3s;
+  flex-direction: column;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.mobile-nav a {
+  padding: 15px;
+  color: #FFF;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.mobile-nav a:hover {
+  background-color: #af95e9;
+}
+
 section h1 {
   font-size: 3.5em;
   margin-bottom: 1rem;
   cursor: pointer;
 }
+
 section a {
   text-decoration: none;
   color: white;
 }
+
 section p {
   font-size: 1.2em;
   max-width: 600px;
 }
+
 #smirkhat {
   max-width: 20px;
   margin-top: 5px;
 }
+
 .uvodni {
   background: linear-gradient(135deg, #000000, #ff00c3, #000000);
   text-shadow: none;
 }
+
 .boxik {
-    background-color: rgba(0, 0, 0, 0.2);
-      backdrop-filter: blur(10px);
-      border-radius: 12px;
-      text-align: left;
-      font-size: 20px;
-      transition: 0.2s;
-      padding: 1.5rem 2rem;
-      max-width: 700px;
-      margin: 0 auto;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  text-align: left;
+  font-size: 20px;
+  transition: 0.2s;
+  padding: 1.5rem 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
+
 .boxik p {
   margin-top: 4px;
 }
+
 strong {
   font-weight: bold;
 }
+
 .fialova {
   background: linear-gradient(135deg, #614385, #516395);
 }
+
 .modra {
   background: linear-gradient(135deg, #4361ee, #4895ef);
 }
+
 .zelena {
   background: linear-gradient(135deg, #00bf8f, #001510);
 }
+
 .zluta {
   background: linear-gradient(135deg, #fec163, #a08800);
 }
+
 .cervena {
   background: linear-gradient(135deg, #e02951, #000000);
 }
+
 .ruzova {
-  background: linear-gradient(135deg, #f26fb9, #0e2d6b)
+  background: linear-gradient(135deg, #f26fb9, #0e2d6b);
 }
+
 .bubble {
   position: absolute;
   border-radius: 50%;
@@ -247,25 +299,23 @@ strong {
 
 @media (max-width: 768px) {
   header {
-    flex-direction: column;
+    flex-direction: row;
     text-align: center;
     padding: 1em;
   }
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 1em;
-    gap: 0.5em;
-    line-height: 1.5;
-  }
   
-  nav a,
-  nav span {
-    display: inline;
-    white-space: nowrap;
-    font-size: 1em;
+  nav {
+    display: none;
   }
+
+  .hamburger {
+    display: block;
+  }
+
+  #mobileNav {
+    display: none;
+  }
+
   section {
     padding: 2em 1em;
   }
@@ -279,6 +329,7 @@ strong {
     max-width: 90%;
   }
 }
+
 .explore-tooltip, .down-tooltip {
   display: none;
   position: absolute;
@@ -294,9 +345,8 @@ strong {
 .explore-icon:hover .explore-tooltip {
   display: block;
   left: -110px;
-  top: 50%s infinite;
+  top: 50%;
 }
-
 
 .down-icon:hover .down-tooltip {
   display: block;
@@ -306,8 +356,9 @@ strong {
 }
 
 .explore-icon i, .down-icon i {
-  animation: bounce 1
+  animation: bounce 1s infinite ease-in-out;
 }
+
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(5px); }
@@ -330,6 +381,7 @@ strong {
 body.last-section .down-icon-wrapper {
   display: none;
 }
+
 .bounce-in {
   animation: bounceIn 1s ease forwards;
 }
